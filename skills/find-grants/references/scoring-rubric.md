@@ -83,7 +83,7 @@ and damages the funder relationship for future asks.
 | 2–3 | No relationship, and the funder is known to favor existing grantees |
 | 0–1 | Prior rejection with no material change since |
 
-Check `grants/outcomes.md` for prior history with this funder before scoring.
+Check `~/Documents/GrantFinder/outcomes.md` for prior history with this funder before scoring.
 
 ## Effort estimate
 

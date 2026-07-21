@@ -25,8 +25,8 @@ paraphrase — those omit exclusions that decide eligibility.
 3. The most recent 990-PF (private foundations) or 990 (public charities and
    operating foundations) via ProPublica Nonprofit Explorer. Read the grants
    paid schedule.
-4. `grants/outcomes.md` for prior history with this funder.
-5. `grants/org-profile/` for the facts to check eligibility against.
+4. `~/Documents/GrantFinder/outcomes.md` for prior history with this funder.
+5. `~/Documents/GrantFinder/org-profile/` for the facts to check eligibility against.
 
 If the user supplied a PDF or a URL, read it in full before searching.
 
@@ -81,7 +81,7 @@ is uncertain, or when an At-risk criterion needs a ruling.
 
 ## Write it up
 
-Save to `grants/opportunities/YYYY-MM-DD-funder-slug.md` using the template at
+Save to `~/Documents/GrantFinder/opportunities/YYYY-MM-DD-funder-slug.md` using the template at
 `${CLAUDE_PLUGIN_ROOT}/templates/opportunities/opportunity.md`. If the file
 already exists, update it and note the re-evaluation date rather than replacing
 the prior assessment — a changed verdict is worth seeing.

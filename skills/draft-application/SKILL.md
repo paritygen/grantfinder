@@ -17,7 +17,7 @@ the repository cannot supply directly.
 
 ## Set up the application
 
-Create `grants/applications/YYYY-funder-slug/` containing:
+Create `~/Documents/GrantFinder/applications/YYYY-funder-slug/` containing:
 
 ```
 questions.md    # the funder's questions, verbatim, with limits and requirements
@@ -34,11 +34,11 @@ limits. Paraphrasing a question loses the constraint that shapes the answer.
 Sort every question into one of three types before drafting anything.
 
 **Direct lookup** — the answer is a stored fact. EIN, address, budget, staff
-count, fiscal year end, board chair. Pull from `grants/org-profile/` and cite
+count, fiscal year end, board chair. Pull from `~/Documents/GrantFinder/org-profile/` and cite
 the file. If a fact is missing or its `_last verified_` date is over a year old,
 flag it rather than using it silently.
 
-**Library reuse** — the answer exists in `grants/org-profile/narratives/` and
+**Library reuse** — the answer exists in `~/Documents/GrantFinder/org-profile/narratives/` and
 needs trimming to the word limit and light tailoring to the funder's language.
 
 **Net-new** — project-specific content that does not exist yet: this project's
@@ -107,7 +107,7 @@ gaps as complete.
 
 When an answer is written that will be reused — a stronger need statement, a
 clearer program description — offer to add it to
-`grants/org-profile/narratives/`. This is how the repository improves. Ask
+`~/Documents/GrantFinder/org-profile/narratives/`. This is how the repository improves. Ask
 first; not every funder-specific answer belongs in the generic library.
 
 ## Reference

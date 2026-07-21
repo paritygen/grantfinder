@@ -16,7 +16,7 @@ conclusions from it only when the data supports them.
 
 ## The ledger
 
-`grants/outcomes.md` holds one row per submitted application. Create it from
+`~/Documents/GrantFinder/outcomes.md` holds one row per submitted application. Create it from
 `${CLAUDE_PLUGIN_ROOT}/templates/outcomes.md` if absent.
 
 Record at submission, then update at decision:

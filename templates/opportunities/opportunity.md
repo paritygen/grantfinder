@@ -58,7 +58,7 @@ TODO: Two or three sentences. Lead with the recommendation.
 
 ## Prior history
 
-TODO: From `grants/outcomes.md`, or "no prior history".
+TODO: From `~/Documents/GrantFinder/outcomes.md`, or "no prior history".
 
 ## Contact
 

@@ -1,8 +1,8 @@
 # GrantFinder
 
 A Claude Cowork plugin for finding, evaluating, and applying for grants. All
-data is stored as plain markdown in your working folder — readable, editable,
-and version-controllable without this plugin.
+data is stored as plain markdown in `~/Documents/GrantFinder/` — readable,
+editable, and version-controllable without this plugin.
 
 ## Skills
 
@@ -28,7 +28,7 @@ Skills trigger from natural language — "find grants for our literacy program",
 ## Where your data lives
 
 ```
-grants/
+~/Documents/GrantFinder/
 ├── org-profile/          # reusable organizational information
 │   ├── organization.md
 │   ├── financials.md
@@ -42,6 +42,15 @@ grants/
 ```
 
 Templates for every file are in `templates/`.
+
+This location is fixed. The plugin always reads and writes
+`~/Documents/GrantFinder/`, regardless of which folder is open in the session —
+so there is one outcomes ledger and one profile, not a partial copy per project
+folder. It also keeps organizational financials out of any repository the
+plugin itself is distributed from.
+
+To move the workspace, change the path in the five `SKILL.md` files; it appears
+near the top of each.
 
 ## How opportunities are scored
 
@@ -63,7 +72,7 @@ Stated plainly so expectations match reality.
 and GrantStation need paid logins the plugin cannot use. It searches free public
 sources: Grants.gov, SAM.gov, state and city portals, funder websites,
 community foundation sites, and 990-PF filings via ProPublica. If you have a
-subscription, export results into `grants/opportunities/` and the plugin will
+subscription, export results into `~/Documents/GrantFinder/opportunities/` and the plugin will
 read and score them.
 
 **No background monitoring.** Nothing runs on a schedule. Searches happen when

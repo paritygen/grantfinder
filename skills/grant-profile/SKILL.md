@@ -19,12 +19,48 @@ version it without this plugin.
 
 ## Workspace layout
 
-Locate the workspace by looking for a `grants/` directory at the root of the
-current folder. If none exists, ask the user where it should live before
-creating anything. Never scatter grant data across the folder.
+The workspace is always `~/Documents/GrantFinder/` — a fixed absolute location in
+the user's home Documents folder. It does **not** move with whichever folder is
+open in the session.
+
+This is deliberate. A workspace resolved relative to the current folder produces
+several partial copies over time, and the outcome analysis then reads whichever
+fragment happens to be in front of it without any sign that data is missing.
+
+Create the directory if it does not exist. Never create a second grant workspace
+somewhere else, and never write grant data into the folder that happens to be
+open — if the user asks for that, explain the fragmentation risk first.
+
+## Grant facts go in the workspace, not the memory store
+
+When the user says "remember that our EIN is …", "remember we don't apply to
+federal funders", or anything else that is a durable grant fact, write it to the
+appropriate file in `~/Documents/GrantFinder/` — not to the session memory
+store.
+
+Session memory is keyed to the folder that is open, so a fact saved there
+disappears the moment the user works from a different folder, and the profile
+that applications are built from silently loses it. It is also invisible to the
+user as a document: it cannot be reviewed before a submission, handed to a
+colleague, or checked against the 990.
+
+Route by type:
+
+| The user says | Goes to |
+|---|---|
+| A fact about the organization | `org-profile/organization.md` |
+| A budget or financial figure | `org-profile/financials.md` |
+| Board or staff information | `org-profile/people.md` |
+| Something about a program | `org-profile/programs/<program>.md` |
+| Reusable prose for applications | `org-profile/narratives/<question>.md` |
+| A funder preference or exclusion | `org-profile/organization.md` → `## Search preferences` |
+| A result, or a funder's stated reason | `outcomes.md` |
+
+Confirm where it was written, so the user knows the fact is in a file they can
+open rather than somewhere they cannot inspect.
 
 ```
-grants/
+~/Documents/GrantFinder/
 ├── org-profile/
 │   ├── organization.md      # identity, mission, legal status, contacts
 │   ├── financials.md        # budget, revenue mix, audit status, fiscal year
@@ -42,13 +78,13 @@ relevant template rather than inventing structure.
 
 ## Setting up a new profile
 
-Run this when `grants/org-profile/` does not exist or is mostly empty.
+Run this when `~/Documents/GrantFinder/org-profile/` does not exist or is mostly empty.
 
 1. Check whether the user already has source material — a recent grant
    application, a 990, an annual report, a capability statement. Reading one
    existing application fills most fields at once. Ask before assuming there is
    nothing to work from.
-2. Copy templates into `grants/org-profile/`.
+2. Copy templates into `~/Documents/GrantFinder/org-profile/`.
 3. Fill what the source material supports. Mark everything else `TODO:` with a
    note on who can supply it. Do not invent values.
 4. Report back what is filled, what is missing, and which gaps will block

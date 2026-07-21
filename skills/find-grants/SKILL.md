@@ -13,11 +13,11 @@ metadata:
 # Grant Opportunity Discovery
 
 Search public funding sources, screen against eligibility, score fit, and
-produce a ranked shortlist written to `grants/opportunities/`.
+produce a ranked shortlist written to `~/Documents/GrantFinder/opportunities/`.
 
 ## Before searching
 
-Read `grants/org-profile/organization.md` and the program index. If the profile
+Read `~/Documents/GrantFinder/org-profile/organization.md` and the program index. If the profile
 does not exist, invoke `grant-profile` first — searching without a profile
 produces generic results that waste the user's review time.
 
@@ -46,7 +46,7 @@ parallel rather than sequentially.
 **Paywalled sources are not accessible.** Candid / Foundation Directory Online,
 Instrumentl, and GrantStation require paid logins this plugin cannot use. If the
 user has a subscription, they can export results and drop the file in
-`grants/opportunities/` — this skill will read and score it. Say so rather than
+`~/Documents/GrantFinder/opportunities/` — this skill will read and score it. Say so rather than
 implying full database coverage.
 
 990-PF filings are the highest-value free source for private foundations: they
@@ -94,7 +94,7 @@ evidence is thin, say the confidence is low rather than inflating the number.
 
 ## Output
 
-Write one file per opportunity to `grants/opportunities/` using
+Write one file per opportunity to `~/Documents/GrantFinder/opportunities/` using
 `${CLAUDE_PLUGIN_ROOT}/templates/opportunities/opportunity.md`, named
 `YYYY-MM-DD-funder-slug.md` by deadline.
 
@@ -112,14 +112,14 @@ out and why is how the user catches a wrong assumption in the profile.
 ## Recurring scans
 
 For "check for new grants this week", read the existing files in
-`grants/opportunities/` first and report only what is new or changed. Do not
+`~/Documents/GrantFinder/opportunities/` first and report only what is new or changed. Do not
 re-present opportunities the user has already reviewed. Note in each file the
 date it was last checked.
 
 ## Feedback
 
 When the user says an opportunity is a bad match, record why in
-`grants/org-profile/organization.md` under `## Search preferences` — for example
+`~/Documents/GrantFinder/org-profile/organization.md` under `## Search preferences` — for example
 "skip opportunities requiring a 1:1 cash match" or "no federal pass-through
 funding, reporting burden too high". Read that section on every subsequent
 search. This is an explicit written preference list, not a trained model; it
