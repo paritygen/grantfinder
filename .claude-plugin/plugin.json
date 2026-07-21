@@ -1,0 +1,10 @@
+{
+  "name": "grantfinder",
+  "version": "0.1.0",
+  "description": "Find, evaluate, and apply for grants using a reusable markdown repository of organizational, program, and financial information.",
+  "author": {
+    "name": "GrantFinder"
+  },
+  "keywords": ["grants", "nonprofit", "fundraising", "grant-writing", "proposals"],
+  "license": "MIT"
+}
