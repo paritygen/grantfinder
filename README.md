@@ -41,6 +41,13 @@ Skills trigger from natural language — "find grants for our literacy program",
 └── outcomes.md           # ledger of submissions and results
 ```
 
+Plus one optional file you create as needed:
+
+```
+~/Documents/GrantFinder/
+└── sources.md            # priority watchlist — funders to check every scan
+```
+
 Templates for every file are in `templates/`.
 
 This location is fixed. The plugin always reads and writes
@@ -51,6 +58,24 @@ plugin itself is distributed from.
 
 To move the workspace, change the path in the five `SKILL.md` files; it appears
 near the top of each.
+
+**Facts belong in these files, not in session memory.** When you say "remember
+our EIN is…" or "remember we don't apply to federal funders," the plugin writes
+it to the right profile file and tells you which one — never to the folder-keyed
+session memory, where it would vanish when you open a different folder and be
+invisible to the applications built from it. Everything the plugin remembers is a
+file you can open and check before a submission.
+
+## The priority watchlist
+
+`sources.md` is a list of funders and lead sources to check on **every** scan,
+on top of the plugin's open search. Say "always check [funder] for grants" and
+it gets added; edit the file directly to add or remove sources.
+
+Each entry can carry per-source instructions — how to check it, what it funds,
+eligibility quirks. Some entries are marked as *lead sources* rather than
+funders (for example a blog listing grants); the plugin mines those for the
+funders they name instead of treating the article itself as an opportunity.
 
 ## How opportunities are scored
 
@@ -63,6 +88,22 @@ Every score carries evidence, an effort estimate, and a confidence level. A
 high score with low confidence means "call the program officer", not "apply".
 
 Full rubric: `skills/find-grants/references/scoring-rubric.md`.
+
+## Results you can act on
+
+**Every result links directly to the grant.** The ranked table ends in a Link
+column with a clickable link on each row, pointing at the specific opportunity
+or application page — not the funder's homepage. Links are only ever the ones
+actually retrieved during the search; the plugin never constructs or guesses a
+URL, so a link that would 404 at a deadline is written as "no direct link" with
+the closest funder page instead.
+
+**Each grant is surfaced once.** Opportunities are stored by a stable identity
+(funder + program), not by date, so the same grant is not rediscovered scan
+after scan. A recurring scan reports only genuinely new opportunities; a known
+grant whose deadline or status changed appears under a short "Updated" list, and
+anything you dismiss stays suppressed — kept on disk as the record of why it was
+ruled out. "No new opportunities since [date]" is a complete answer.
 
 ## What this plugin does not do
 
