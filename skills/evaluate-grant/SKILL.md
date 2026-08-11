@@ -75,13 +75,20 @@ Then give a direct recommendation — **Apply**, **Apply if [condition]**,
 **Contact the program officer first**, or **Skip** — with the reasoning in two
 or three sentences. Lead with the recommendation; do not bury it under analysis.
 
+Open the response with a clickable direct link to the opportunity, so the user
+can go straight to the source. Use the URL actually retrieved — never a
+constructed one — and link the specific grant or application page, not the
+funder homepage. If no direct link exists, say so and give the closest funder
+page.
+
 "Contact the program officer first" is the right call more often than it gets
 made: when fit is strong but the funder's practice is unclear, when the ask size
 is uncertain, or when an At-risk criterion needs a ruling.
 
 ## Write it up
 
-Save to `~/Documents/GrantFinder/opportunities/YYYY-MM-DD-funder-slug.md` using the template at
+Save to `~/Documents/GrantFinder/opportunities/funder-slug--program-slug.md`
+using the template at
 `${CLAUDE_PLUGIN_ROOT}/templates/opportunities/opportunity.md`. If the file
 already exists, update it and note the re-evaluation date rather than replacing
 the prior assessment — a changed verdict is worth seeing.

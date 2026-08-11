@@ -1,6 +1,7 @@
 # TODO: Funder — TODO: Program
 
-- **Status:** Identified / Evaluating / Applying / Submitted / Decided
+- **Status:** Identified / Evaluating / Applying / Submitted / Decided / Dismissed / Skip
+- **Identity:** TODO: funder-slug--program-slug (stable; do not change between scans)
 - **Fit score:** TODO: /100
 - **Confidence:** High / Medium / Low
 - **Effort:** Light / Moderate / Heavy / Very heavy
@@ -15,8 +16,12 @@
 - **Typical grant size:** TODO: median from 990-PF grants paid schedule
 - **Period:** TODO:
 - **Match required:** TODO:
-- **Source URL:** TODO:
+- **Source URL:** TODO: direct link to this specific opportunity (deep link, not the funder homepage)
+- **Apply / portal URL:** TODO: where the application is actually submitted, if different
 - **Guidelines:** TODO: link or local file
+
+Both URLs must be links actually retrieved, never constructed. If no direct
+per-opportunity link exists, record the closest funder page and note that here.
 
 ## Eligibility
 
